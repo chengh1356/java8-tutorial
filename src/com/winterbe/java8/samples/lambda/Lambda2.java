@@ -1,5 +1,5 @@
 package com.winterbe.java8.samples.lambda;
-
+import com.winterbe.java8.samples.lambda.Person;
 /**
  * @author Benjamin Winterberg
  */
@@ -21,11 +21,17 @@ public class Lambda2 {
     }
 
     public static void main(String[] args) {
-        Converter<String, Integer> integerConverter1 = (from) -> Integer.valueOf(from);
+//        Converter<String, Integer> integerConverter1 = (from) -> Integer.valueOf(from);
+//        Integer converted1 = integerConverter1.convert("123");
+//        System.out.println(converted1);   // result: 123
+        Converter<String,Integer> integerConverter1 = new Converter<String, Integer>() {
+            @Override
+            public Integer convert(String from) {
+                return Integer.valueOf(from);
+            }
+        };
         Integer converted1 = integerConverter1.convert("123");
         System.out.println(converted1);   // result: 123
-
-
         // method reference
 
         Converter<String, Integer> integerConverter2 = Integer::valueOf;

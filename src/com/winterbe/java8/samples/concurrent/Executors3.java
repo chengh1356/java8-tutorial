@@ -16,12 +16,12 @@ import java.util.concurrent.TimeUnit;
 public class Executors3 {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
-        test1();
+//        test1();
 //        test2();
 //        test3();
 
 //        test4();
-//        test5();
+        test5();
     }
 
     private static void test5() throws InterruptedException, ExecutionException {
@@ -73,7 +73,7 @@ public class Executors3 {
 
         Runnable task = () -> {
             try {
-                TimeUnit.SECONDS.sleep(2);
+                TimeUnit.SECONDS.sleep(5);
                 System.out.println("Scheduling: " + System.nanoTime());
             }
             catch (InterruptedException e) {
@@ -81,7 +81,7 @@ public class Executors3 {
             }
         };
 
-        executor.scheduleWithFixedDelay(task, 0, 1, TimeUnit.SECONDS);
+        executor.scheduleWithFixedDelay(task, 0, 5, TimeUnit.SECONDS);
     }
 
     private static void test2() {
@@ -93,8 +93,9 @@ public class Executors3 {
     }
 
     private static void test1() throws InterruptedException {
+        //计划executor
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-
+        //延迟时间
         Runnable task = () -> System.out.println("Scheduling: " + System.nanoTime());
         int delay = 3;
         ScheduledFuture<?> future = executor.schedule(task, delay, TimeUnit.SECONDS);

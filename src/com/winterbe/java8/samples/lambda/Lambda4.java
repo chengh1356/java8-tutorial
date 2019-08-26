@@ -1,5 +1,5 @@
 package com.winterbe.java8.samples.lambda;
-
+import com.winterbe.java8.samples.lambda.Lambda2;
 /**
  * @author Benjamin Winterberg
  */
@@ -22,7 +22,8 @@ public class Lambda4 {
             outerNum = 13;
             return String.valueOf(from);
         };
-
+//        stringConverter2.convert(1111);
+        System.out.println(outerNum);
         String[] array = new String[1];
         Lambda2.Converter<Integer, String> stringConverter3 = (from) -> {
             array[0] = "Hi there";
