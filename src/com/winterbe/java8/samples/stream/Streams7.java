@@ -34,7 +34,7 @@ public class Streams7 {
     static void test2() {
         IntStream.range(1, 4)
             .mapToObj(num -> new Foo("Foo" + num))
-            .peek(f -> IntStream.range(1, 4)
+            .peek(f -> IntStream.range(1, 5)
                 .mapToObj(num -> new Bar("Bar" + num + " <- " + f.name))
                 .forEach(f.bars::add))
             .flatMap(f -> f.bars.stream())

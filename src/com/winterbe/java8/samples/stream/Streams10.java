@@ -37,7 +37,7 @@ public class Streams10 {
                 new Person("David", 12));
 
 //        test1(persons);
-//        test2(persons);
+        test2(persons);
 //        test3(persons);
 //        test4(persons);
 //        test5(persons);
@@ -64,6 +64,7 @@ public class Streams10 {
 
         personsByAge
             .forEach((age, p) -> System.out.format("age %s: %s\n", age, p));
+
 
         // age 18: [Max]
         // age 23:[Peter, Pamela]
@@ -98,7 +99,6 @@ public class Streams10 {
         System.out.println(names);
         // In Germany Max and Peter and Pamela are of legal age.
     }
-
     private static void test6(List<Person> persons) {
         Map<Integer, String> map = persons
             .stream()

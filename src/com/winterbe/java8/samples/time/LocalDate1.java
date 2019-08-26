@@ -16,10 +16,12 @@ public class LocalDate1 {
     public static void main(String[] args) {
         LocalDate today = LocalDate.now();
         LocalDate tomorrow = today.plus(1, ChronoUnit.DAYS);
+        LocalDate date1 = today.minus(10,ChronoUnit.DAYS);
         LocalDate yesterday = tomorrow.minusDays(2);
 
         System.out.println(today);
         System.out.println(tomorrow);
+        System.out.println(date1);
         System.out.println(yesterday);
 
         LocalDate independenceDay = LocalDate.of(2014, Month.JULY, 4);

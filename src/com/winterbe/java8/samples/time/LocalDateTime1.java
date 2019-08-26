@@ -37,9 +37,9 @@ public class LocalDateTime1 {
 
         DateTimeFormatter formatter =
                 DateTimeFormatter
-                        .ofPattern("MMM dd, yyyy - HH:mm");
+                        .ofPattern("yyyy MM dd - HH:mm");
 
-        LocalDateTime parsed = LocalDateTime.parse("Nov 03, 2014 - 07:13", formatter);
+        LocalDateTime parsed = LocalDateTime.parse("2014 09 03 - 07:13", formatter);
         String string = parsed.format(formatter);
         System.out.println(string);     // Nov 03, 2014 - 07:13
     }

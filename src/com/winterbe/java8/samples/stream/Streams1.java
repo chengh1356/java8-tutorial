@@ -28,10 +28,9 @@ public class Streams1 {
                 .stream()
                 .filter((s) -> s.startsWith("a"))
                 .forEach(System.out::println);
-
         // "aaa2", "aaa1"
 
-
+        System.out.println("************************************");
         // sorting
 
         stringCollection
@@ -42,7 +41,7 @@ public class Streams1 {
 
         // "aaa1", "aaa2"
 
-
+        System.out.println("************************************");
         // mapping
 
         stringCollection
@@ -52,7 +51,7 @@ public class Streams1 {
                 .forEach(System.out::println);
 
         // "DDD2", "DDD1", "CCC", "BBB3", "BBB2", "AAA2", "AAA1"
-
+        System.out.println("************************************");
 
         // matching
 
@@ -74,7 +73,7 @@ public class Streams1 {
 
         System.out.println(noneStartsWithZ);      // true
 
-
+        System.out.println("************************************");
         // counting
 
         long startsWithB = stringCollection
@@ -84,7 +83,7 @@ public class Streams1 {
 
         System.out.println(startsWithB);    // 3
 
-
+        System.out.println("************************************");
         // reducing
 
         Optional<String> reduced =
